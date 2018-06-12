@@ -78,6 +78,10 @@ exports.GetMoviesByMovieId = (req, res) => {
             res.send(err);
             return;
         }
-        res.send(movie);
+
+        if(!movie.length) {
+            res.send("Movies with Given ID not existed")
+        } else
+            res.send(movie);
     })
 }
