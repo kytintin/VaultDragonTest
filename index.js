@@ -14,6 +14,8 @@ var db = mongoose.connection;
 //Test MongoDB connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
+app.set('view engine', 'ejs');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:false }));
 app.use('/movies',movie);
