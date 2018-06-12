@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const movie = require('./Routes/movies');
-const keys = require('./Config/dev');
+const keys = require('./Config/keys');
 
 var app = express();
 
